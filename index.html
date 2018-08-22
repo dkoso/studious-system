@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>KosoData Help Desk</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-box">
+            <div class="main-heading">KosoData Help Desk</div>
+            <div class="input-form">
+                <form action="http://192.168.2.60:3000/users/" method="post" id="my-form">
+                    Name:
+                    <br>
+                    <input type="text" name="userName" id="userName" autocomplete="userName">
+                    <br> Office:
+                    <br>
+                    <input type="text" name="userOffice" id="userOffice" autocomplete="userOffice">
+                    <br> e-mail:
+                    <br>
+                    <input type="text" name="userEmail" id="userEmail" autocomplete="userEmail">
+                    <br>
+                    <br> Trouble:
+                    <br>
+                    <textarea name="userTrouble" id="userTrouble" style="width:475px; height:150px; resize:none"></textarea>
+                    <br>
+                    <br>
+                    <button class="btn-new" id="subTickButton">
+                        <i class="icon ion-md-checkmark-circle" id="submitDB"></i>Submit Ticket</button>
+                </form>
+                <br>
+                <div class="submitted" id="show-status"></div>
+                <br>
+                <div class="nada" id="return-status"></div>
+            </div>
+        </div>
+
+        <div class="side-box">
+            <div class="box">
+                <div class="box-line0" id="line0"></div>
+                <div class="box-line1" id="line1"></div>
+                <div class="box-line2" id="line2"></div>
+                <div class="box-line3" id="line3"></div>
+                <div class="box-line4" id="line4"></div>
+                <div class="box-line5" id="line5"></div>
+                <div class="box-linetest" id="linetest"></div>
+            </div>
+            <br>
+            <button class="btn-clear" id="get-all-up">
+                <i class="icon ion-md-arrow-round-up"></i>Up</button>
+            <button class="btn-clear" id="get-all-down">
+                <i class="icon ion-md-arrow-round-down"></i>Down</button>
+            <button class="btn-get" id="get">
+                <i class="icon ion-md-cloud-download"></i>Get Ticket</button>
+            <button class="btn-clear" id="clear-all">
+                <i class="icon ion-md-square-outline"></i>Clear</button>
+            <br>
+            <br>
+            <button class="btn-clear" id="last">
+                <i class="icon ion-md-fastforward"></i>Last</button>
+            <button class="btn-clear" id="update">
+                <i class="icon ion-md-swap"></i>Update</button>
+            <button class="btn-clear" id="delete">
+                <i class="icon ion-md-trash"></i>Delete</button>
+            <button class="btn-clear" id="test">
+                <i class="ion-ios-download-outline"></i>Test</button>
+            <br>
+            <br>
+            <input type="text" class="tickval" id="tick-val" placeholder="Ticket ID" spellcheck="false">
+            <span class="box-line0" id="tick-num"></span>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
